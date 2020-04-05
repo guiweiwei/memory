@@ -1,0 +1,9 @@
+template <typename T>
+inline T borderAlign(size_t size) 
+{
+  if (size & (sizeof(T) - 1)) {
+    return size + sizeof(T) - (size & (sizeof(T) - 1));
+  } else {
+    return size;
+  }
+}
